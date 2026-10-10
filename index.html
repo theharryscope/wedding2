@@ -1,0 +1,1487 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Love Quest: Chukwudi & Amarachi 2026 | Nigerian Wedding Invitation</title>
+    
+    <!-- Open Graph Metadata -->
+    <meta property="og:title" content="The Wedding of Chukwudi Okafor & Amarachi Nwankwo #ChukwudiAndAmarachi2026">
+    <meta property="og:description" content="You are cordially invited to celebrate our love story in Awka, Anambra State, Nigeria. November 14-15, 2026.">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&w=1200&q=80">
+    <meta property="og:type" content="website">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Canvas Confetti Library for Celebrations -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        emerald: {
+                            800: '#0B5D45',
+                            900: '#073e2e',
+                            950: '#04281e',
+                        },
+                        gold: {
+                            300: '#e8cb8d',
+                            400: '#D6B56D',
+                            500: '#b89244',
+                            600: '#94722f',
+                        },
+                        ivory: {
+                            50: '#FFFDF9',
+                            100: '#FFF8E9',
+                            200: '#F7EED8',
+                        }
+                    },
+                    fontFamily: {
+                        serif: ['Cormorant Garamond', 'serif'],
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                        script: ['Alex Brush', 'cursive'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Custom Keyframe Animations & FX */
+        @keyframes floatSlow {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-12px) rotate(2deg); }
+        }
+        @keyframes pulseGlow {
+            0%, 100% { opacity: 0.4; filter: drop-shadow(0 0 8px rgba(214,181,109,0.5)); }
+            50% { opacity: 0.9; filter: drop-shadow(0 0 18px rgba(214,181,109,0.9)); }
+        }
+        @keyframes floatUpNaira {
+            0% { transform: translateY(0) rotate(0deg) scale(1); opacity: 1; }
+            100% { transform: translateY(-220px) rotate(25deg) scale(1.15); opacity: 0; }
+        }
+
+        .animate-float { animation: floatSlow 6s ease-in-out infinite; }
+        .animate-pulse-glow { animation: pulseGlow 3s ease-in-out infinite; }
+
+        /* 3D Envelope Animation */
+        .perspective-1000 { perspective: 1000px; }
+        .transform-style-3d { transform-style: preserve-3d; }
+        .backface-hidden { backface-visibility: hidden; }
+
+        .envelope-flap {
+            transform-origin: top;
+            transition: transform 0.8s ease-in-out, z-index 0.3s;
+        }
+        .envelope-flap.open {
+            transform: rotateX(180deg);
+            z-index: 5;
+        }
+
+        /* Gold Shimmer Text Effect */
+        .text-gold-gradient {
+            background: linear-gradient(135deg, #FFF8E9 0%, #D6B56D 50%, #8C6A23 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* Igbo Motif Border Pattern */
+        .igbo-pattern-border {
+            background-color: #0B5D45;
+            background-image: radial-gradient(#D6B56D 1.5px, transparent 1.5px), radial-gradient(#D6B56D 1.5px, #0B5D45 1.5px);
+            background-size: 24px 24px;
+            background-position: 0 0, 12px 12px;
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #FFF8E9; }
+        ::-webkit-scrollbar-thumb { background: #0B5D45; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #D6B56D; }
+    </style>
+</head>
+<body class="bg-ivory-100 text-slate-800 font-sans antialiased overflow-x-hidden selection:bg-gold-400 selection:text-emerald-950">
+
+    <script>
+        // CENTRAL WEDDING CONFIGURATION OBJECT
+        const WEDDING_CONFIG = {
+            groom: "Chukwudi Okafor",
+            bride: "Amarachi Nwankwo",
+            groomInitials: "C",
+            brideInitials: "A",
+            title: "The Love Story of Chukwudi & Amarachi",
+            hashtag: "#ChukwudiAndAmarachi2026",
+            theme: "A Love Written in the Stars",
+            
+            // Dates
+            tradDateIso: "2026-11-14T10:00:00",
+            whiteDateIso: "2026-11-15T10:00:00",
+            tradDateFormatted: "Saturday, 14th November 2026",
+            whiteDateFormatted: "Sunday, 15th November 2026",
+            
+            // Locations
+            cityState: "Awka, Anambra State, Nigeria",
+            tradVenue: "Golden Crest Event Centre, Awka",
+            whiteVenue: "St. Paul's Cathedral, Zik Avenue, Awka (Demo Venue)",
+            receptionVenue: "Golden Crest Event Centre, Executive Grand Ballroom, Awka",
+
+            // Color Palette
+            colors: {
+                emerald: "#0B5D45",
+                gold: "#D6B56D",
+                ivory: "#FFF8E9"
+            },
+
+            // Couple Story
+            story: {
+                howMet: "Chukwudi and Amarachi first met at a mutual friend's birthday celebration in Lagos. What began as a witty discussion over jollof rice turned into hours of endless conversation, shared dreams, and a deep friendship that gradually grew into eternal love.",
+                proposal: "On a serene evening overlooking the serene Hills, Chukwudi surprised Amarachi with a private intimate dinner under the stars, asking her to be his partner for a lifetime of laughter, joy, and forever."
+            },
+
+            // Love Quest Mini-Game Configuration
+            loveQuest: {
+                q1: {
+                    question: "Where did Chukwudi and Amarachi first cross paths?",
+                    options: [
+                        { text: "At a mutual friend's celebration in Lagos", correct: true },
+                        { text: "On a flight returning from London", correct: false },
+                        { text: "During a football tournament in Enugu", correct: false }
+                    ],
+                    hint: "Think back to good food, laughter, and mutual friend gatherings!"
+                },
+                q2: {
+                    scrambleAnswer: "AMARACHI",
+                    clue: "Unscramble the bride's beautiful Igbo name meaning 'God's Grace': A - M - A - R - A - C - H - I"
+                },
+                q3: {
+                    correctDate: "2026-11-14",
+                    hint: "Look for the mid-November Saturday in 2026!"
+                },
+                q4: {
+                    correctPaletteId: "emerald-gold",
+                    hint: "Royal Emerald Green, Champagne Gold, and Warm Ivory!"
+                },
+                q5: {
+                    correctState: "Awka, Anambra State",
+                    options: ["Lagos, Lagos State", "Awka, Anambra State", "Port Harcourt, Rivers State", "Abuja, FCT"]
+                }
+            }
+        };
+    </script>
+
+    <!-- Web Audio Synthesizer Sound Effects (Seal Pop & Chimes) -->
+    <script>
+        // Web Audio API Sound generator (No external audio file dependency required)
+        const SoundFX = {
+            ctx: null,
+            init() {
+                if (!this.ctx) {
+                    const AudioContext = window.AudioContext || window.webkitAudioContext;
+                    if (AudioContext) this.ctx = new AudioContext();
+                }
+            },
+            playSealPop() {
+                this.init();
+                if (!this.ctx) return;
+                try {
+                    const osc = this.ctx.createOscillator();
+                    const gain = this.ctx.createGain();
+                    osc.type = 'sine';
+                    osc.frequency.setValueAtTime(180, this.ctx.currentTime);
+                    osc.frequency.exponentialRampToValueAtTime(600, this.ctx.currentTime + 0.15);
+                    gain.gain.setValueAtTime(0.4, this.ctx.currentTime);
+                    gain.gain.exponentialRampToValueAtTime(0.01, this.ctx.currentTime + 0.15);
+                    osc.connect(gain);
+                    gain.connect(this.ctx.destination);
+                    osc.start();
+                    osc.stop(this.ctx.currentTime + 0.15);
+                } catch(e){}
+            },
+            playChime() {
+                this.init();
+                if (!this.ctx) return;
+                try {
+                    [523.25, 659.25, 783.99, 1046.50].forEach((freq, i) => {
+                        const osc = this.ctx.createOscillator();
+                        const gain = this.ctx.createGain();
+                        osc.type = 'triangle';
+                        osc.frequency.value = freq;
+                        const startTime = this.ctx.currentTime + (i * 0.08);
+                        gain.gain.setValueAtTime(0.15, startTime);
+                        gain.gain.exponentialRampToValueAtTime(0.001, startTime + 0.6);
+                        osc.connect(gain);
+                        gain.connect(this.ctx.destination);
+                        osc.start(startTime);
+                        osc.stop(startTime + 0.6);
+                    });
+                } catch(e){}
+            },
+            playNairaCash() {
+                this.init();
+                if (!this.ctx) return;
+                try {
+                    const osc = this.ctx.createOscillator();
+                    const gain = this.ctx.createGain();
+                    osc.type = 'sine';
+                    osc.frequency.setValueAtTime(800, this.ctx.currentTime);
+                    osc.frequency.exponentialRampToValueAtTime(1200, this.ctx.currentTime + 0.08);
+                    gain.gain.setValueAtTime(0.2, this.ctx.currentTime);
+                    gain.gain.linearRampToValueAtTime(0.01, this.ctx.currentTime + 0.08);
+                    osc.connect(gain);
+                    gain.connect(this.ctx.destination);
+                    osc.start();
+                    osc.stop(this.ctx.currentTime + 0.08);
+                } catch(e){}
+            }
+        };
+    </script>
+
+    <!-- OPENING EXPERIENCE: Interactive Envelope -->
+    <div id="envelope-overlay" class="fixed inset-0 z-50 flex items-center justify-center bg-emerald-950 p-4 transition-opacity duration-1000">
+        <div class="relative w-full max-w-lg perspective-1000">
+            
+            <!-- Skip Intro Button -->
+            <button onclick="openInvitationDirectly()" class="absolute -top-12 right-0 flex items-center gap-1 text-gold-400 hover:text-white text-sm font-medium transition-colors focus:outline-none">
+                <span>Skip Intro</span>
+                <i data-lucide="skip-forward" class="w-4 h-4"></i>
+            </button>
+
+            <!-- Envelope Container -->
+            <div id="envelope-card" class="relative bg-ivory-100 rounded-2xl shadow-2xl border-2 border-gold-400/40 p-6 md:p-8 text-center overflow-hidden transition-all duration-700">
+                
+                <!-- Corner Igbo Pattern Accents -->
+                <div class="absolute top-2 left-2 w-12 h-12 border-t-2 border-l-2 border-gold-500 rounded-tl-lg"></div>
+                <div class="absolute top-2 right-2 w-12 h-12 border-t-2 border-r-2 border-gold-500 rounded-tr-lg"></div>
+                <div class="absolute bottom-2 left-2 w-12 h-12 border-b-2 border-l-2 border-gold-500 rounded-bl-lg"></div>
+                <div class="absolute bottom-2 right-2 w-12 h-12 border-b-2 border-r-2 border-gold-500 rounded-br-lg"></div>
+
+                <!-- Envelope Cover Content -->
+                <div id="envelope-content" class="py-8 space-y-6">
+                    <div class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-emerald-800 text-gold-400 mb-2 shadow-lg ring-4 ring-gold-400/20">
+                        <i data-lucide="mail-open" class="w-8 h-8"></i>
+                    </div>
+
+                    <div>
+                        <p class="font-script text-3xl md:text-4xl text-gold-600 mb-1">You Are Cordially Invited</p>
+                        <h1 class="font-serif text-2xl md:text-3xl font-bold text-emerald-900 tracking-wide">
+                            Chukwudi & Amarachi
+                        </h1>
+                        <p class="text-xs uppercase tracking-widest text-slate-500 mt-2">Awka, Anambra State • Nov 2026</p>
+                    </div>
+
+                    <!-- Interactive Wax Seal Button -->
+                    <div class="relative pt-4">
+                        <button id="wax-seal-btn" onclick="triggerEnvelopeOpen()" class="group relative inline-flex items-center justify-center w-24 h-24 rounded-full bg-gradient-to-br from-gold-400 via-gold-500 to-amber-700 text-emerald-950 font-serif font-bold text-xl shadow-xl hover:scale-105 active:scale-95 transition-all duration-300 ring-4 ring-gold-300/50">
+                            <!-- Intertwined C & A -->
+                            <span class="z-10 tracking-tighter text-2xl drop-shadow-md">C & A</span>
+                            <div class="absolute inset-0 rounded-full border-2 border-dashed border-ivory-100/60 animate-spin-slow"></div>
+                            <span class="absolute -bottom-8 whitespace-nowrap text-xs font-sans font-semibold text-gold-300 tracking-wider group-hover:text-white transition-colors">CLICK WAX SEAL</span>
+                        </button>
+                    </div>
+
+                    <p class="text-xs italic text-slate-600 pt-4">A beautiful love story awaits your presence</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- NAVIGATION BAR -->
+    <nav id="main-nav" class="fixed top-0 left-0 right-0 z-40 bg-ivory-100/90 backdrop-blur-md border-b border-gold-400/20 transition-all duration-300 transform -translate-y-full">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16 md:h-20">
+                <!-- Logo Initials -->
+                <a href="#hero" class="flex items-center gap-2 group">
+                    <div class="w-10 h-10 rounded-full bg-emerald-800 text-gold-400 flex items-center justify-center font-serif font-bold text-lg shadow-inner group-hover:bg-gold-500 group-hover:text-emerald-950 transition-colors">
+                        C&A
+                    </div>
+                    <span class="font-serif font-semibold text-lg text-emerald-900 hidden sm:inline">Chukwudi & Amarachi</span>
+                </a>
+
+                <!-- Desktop Nav Links -->
+                <div class="hidden md:flex items-center space-x-6 text-sm font-medium text-slate-700">
+                    <a href="#hero" class="hover:text-emerald-800 transition-colors">Home</a>
+                    <a href="#story" class="hover:text-emerald-800 transition-colors">Our Story</a>
+                    <a href="#love-quest" class="hover:text-emerald-800 transition-colors flex items-center gap-1 text-gold-600 font-bold">
+                        <i data-lucide="gamepad-2" class="w-4 h-4"></i> Love Quest
+                    </a>
+                    <a href="#schedule" class="hover:text-emerald-800 transition-colors">Events</a>
+                    <a href="#fashion" class="hover:text-emerald-800 transition-colors">Dress Code</a>
+                    <a href="#gallery" class="hover:text-emerald-800 transition-colors">Gallery</a>
+                    <a href="#guestbook" class="hover:text-emerald-800 transition-colors">Guestbook</a>
+                    <a href="#rsvp" class="px-5 py-2 rounded-full bg-emerald-800 text-gold-300 font-semibold shadow-md hover:bg-emerald-900 transition-colors">RSVP Now</a>
+                </div>
+
+                <!-- Right Actions (Sound Toggle + Mobile Menu Button) -->
+                <div class="flex items-center gap-3">
+                    <!-- Music Sound Effect Indicator Toggle -->
+                    <button id="sound-toggle-btn" onclick="toggleAudioFx()" title="Toggle Web Audio Sound FX" class="p-2.5 rounded-full bg-ivory-200 text-emerald-800 border border-gold-400/40 hover:bg-gold-400 hover:text-emerald-950 transition-all">
+                        <i id="sound-icon-on" data-lucide="volume-2" class="w-5 h-5"></i>
+                        <i id="sound-icon-off" data-lucide="volume-x" class="w-5 h-5 hidden"></i>
+                    </button>
+
+                    <!-- Mobile Menu Hamburger -->
+                    <button onclick="toggleMobileMenu()" class="md:hidden p-2 rounded-lg text-emerald-900 focus:outline-none">
+                        <i data-lucide="menu" class="w-6 h-6"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Drawer Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-ivory-100 border-b border-gold-400/30 px-4 pt-2 pb-6 space-y-3">
+            <a href="#hero" onclick="toggleMobileMenu()" class="block py-2 text-slate-800 hover:text-emerald-800 font-medium">Home</a>
+            <a href="#story" onclick="toggleMobileMenu()" class="block py-2 text-slate-800 hover:text-emerald-800 font-medium">Our Story</a>
+            <a href="#love-quest" onclick="toggleMobileMenu()" class="block py-2 text-gold-600 font-bold flex items-center gap-2">
+                <i data-lucide="gamepad-2" class="w-4 h-4"></i> Love Quest Mini-Game
+            </a>
+            <a href="#schedule" onclick="toggleMobileMenu()" class="block py-2 text-slate-800 hover:text-emerald-800 font-medium">Wedding Schedule</a>
+            <a href="#fashion" onclick="toggleMobileMenu()" class="block py-2 text-slate-800 hover:text-emerald-800 font-medium">Dress Code & Fashion</a>
+            <a href="#gallery" onclick="toggleMobileMenu()" class="block py-2 text-slate-800 hover:text-emerald-800 font-medium">Photo Wall</a>
+            <a href="#spray-section" onclick="toggleMobileMenu()" class="block py-2 text-slate-800 hover:text-emerald-800 font-medium">Naira Spray Simulator</a>
+            <a href="#guestbook" onclick="toggleMobileMenu()" class="block py-2 text-slate-800 hover:text-emerald-800 font-medium">Guestbook</a>
+            <a href="#rsvp" onclick="toggleMobileMenu()" class="block py-2 text-center bg-emerald-800 text-gold-300 font-bold rounded-xl shadow">RSVP Attendance</a>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section id="hero" class="relative min-h-screen flex items-center justify-center pt-20 pb-12 px-4 overflow-hidden bg-gradient-to-b from-emerald-950 via-emerald-900 to-emerald-950 text-ivory-100">
+        
+        <!-- Background Overlay Image with Parallax Fade -->
+        <div class="absolute inset-0 z-0 opacity-25 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&w=2000&q=80');"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-emerald-950 via-transparent to-emerald-950/80 z-0"></div>
+
+        <div class="relative z-10 max-w-4xl mx-auto text-center space-y-6">
+            
+            <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-gold-400/20 border border-gold-400/40 text-gold-300 text-xs sm:text-sm font-semibold tracking-widest uppercase">
+                <i data-lucide="sparkles" class="w-4 h-4"></i>
+                <span id="hero-hashtag">#ChukwudiAndAmarachi2026</span>
+            </div>
+
+            <h2 class="font-script text-3xl sm:text-5xl text-gold-300 font-normal">Two Hearts. One Eternal Journey.</h2>
+            
+            <h1 class="font-serif text-4xl sm:text-6xl md:text-7xl font-bold tracking-tight text-ivory-50 leading-tight">
+                Chukwudi Okafor <br>
+                <span class="font-script text-gold-400 text-5xl sm:text-7xl font-normal">&amp;</span> <br>
+                Amarachi Nwankwo
+            </h1>
+
+            <p class="max-w-2xl mx-auto text-base sm:text-lg text-slate-200 font-light">
+                Together with our families, we joyfully invite you to celebrate our traditional and white wedding celebrations in Anambra State.
+            </p>
+
+            <div class="pt-2 flex flex-wrap justify-center gap-4">
+                <a href="#love-quest" class="px-8 py-3.5 rounded-full bg-gradient-to-r from-gold-400 via-gold-500 to-amber-600 text-emerald-950 font-bold text-base shadow-xl hover:shadow-gold-500/30 hover:scale-105 active:scale-95 transition-all flex items-center gap-2">
+                    <i data-lucide="compass" class="w-5 h-5"></i>
+                    <span>Begin The Love Quest</span>
+                </a>
+                <a href="#rsvp" class="px-8 py-3.5 rounded-full bg-emerald-800/80 border border-gold-400/60 text-ivory-100 font-semibold text-base hover:bg-emerald-800 transition-all flex items-center gap-2">
+                    <i data-lucide="check-circle-2" class="w-5 h-5"></i>
+                    <span>RSVP Now</span>
+                </a>
+            </div>
+
+            <!-- COUNTDOWN TIMER CONTAINER -->
+            <div class="pt-10">
+                <p class="text-xs font-semibold uppercase tracking-widest text-gold-400 mb-4">Countdown to Our Traditional Marriage (Igba Nkwu)</p>
+                
+                <div id="countdown-grid" class="grid grid-cols-4 gap-3 sm:gap-6 max-w-lg mx-auto">
+                    <div class="p-3 sm:p-4 rounded-xl bg-emerald-900/80 border border-gold-400/30 backdrop-blur-sm shadow-md">
+                        <span id="cd-days" class="block font-serif text-2xl sm:text-4xl font-bold text-gold-400">00</span>
+                        <span class="text-[10px] sm:text-xs text-slate-300 uppercase tracking-wider">Days</span>
+                    </div>
+                    <div class="p-3 sm:p-4 rounded-xl bg-emerald-900/80 border border-gold-400/30 backdrop-blur-sm shadow-md">
+                        <span id="cd-hours" class="block font-serif text-2xl sm:text-4xl font-bold text-gold-400">00</span>
+                        <span class="text-[10px] sm:text-xs text-slate-300 uppercase tracking-wider">Hours</span>
+                    </div>
+                    <div class="p-3 sm:p-4 rounded-xl bg-emerald-900/80 border border-gold-400/30 backdrop-blur-sm shadow-md">
+                        <span id="cd-mins" class="block font-serif text-2xl sm:text-4xl font-bold text-gold-400">00</span>
+                        <span class="text-[10px] sm:text-xs text-slate-300 uppercase tracking-wider">Mins</span>
+                    </div>
+                    <div class="p-3 sm:p-4 rounded-xl bg-emerald-900/80 border border-gold-400/30 backdrop-blur-sm shadow-md">
+                        <span id="cd-secs" class="block font-serif text-2xl sm:text-4xl font-bold text-gold-400">00</span>
+                        <span class="text-[10px] sm:text-xs text-slate-300 uppercase tracking-wider">Secs</span>
+                    </div>
+                </div>
+
+                <!-- Add to Google Calendar Button -->
+                <div class="mt-6">
+                    <button onclick="addToGoogleCalendar()" class="inline-flex items-center gap-2 text-xs font-semibold text-gold-300 hover:text-white transition-colors">
+                        <i data-lucide="calendar-plus" class="w-4 h-4"></i>
+                        <span>Add Event to Google Calendar</span>
+                    </button>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- CENTRAL FEATURE: THE LOVE QUEST MINI-GAME -->
+    <section id="love-quest" class="py-20 px-4 bg-ivory-50 relative">
+        <div class="max-w-4xl mx-auto">
+            
+            <div class="text-center space-y-3 mb-10">
+                <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-gold-400/20 text-gold-600 text-xs font-bold uppercase tracking-widest">
+                    <i data-lucide="trophy" class="w-4 h-4"></i> Interactive Guest Challenge
+                </div>
+                <h2 class="font-serif text-3xl sm:text-5xl font-bold text-emerald-900">The Love Quest: Discover Our Forever</h2>
+                <p class="text-slate-600 max-w-xl mx-auto text-sm sm:text-base">
+                    Complete 6 romantic mini-challenges to unlock all official wedding details, location venues, dress code secrets, and celebration rewards!
+                </p>
+            </div>
+
+            <!-- QUEST PROGRESS HEADER -->
+            <div class="bg-ivory-100 rounded-2xl p-6 border border-gold-400/40 shadow-lg mb-8">
+                <div class="flex flex-col sm:flex-row items-center justify-between gap-4 mb-3">
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-full bg-emerald-800 text-gold-400 flex items-center justify-center font-bold">
+                            <span id="quest-current-step-num">1</span>/6
+                        </div>
+                        <div>
+                            <h3 id="quest-title-display" class="font-serif font-bold text-lg text-emerald-900">Quest 1: How Their Story Began</h3>
+                            <p id="quest-status-text" class="text-xs text-slate-500">Answer the question to unlock Clue #1</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <button onclick="skipAllQuests()" class="px-3 py-1.5 text-xs font-semibold text-slate-500 hover:text-emerald-800 transition-colors">
+                            Skip Quest &amp; View All
+                        </button>
+                        <button onclick="resetLoveQuest()" class="px-3 py-1.5 text-xs font-semibold text-rose-600 hover:text-rose-800 transition-colors">
+                            Reset Quest
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Progress Bar -->
+                <div class="w-full h-3 bg-ivory-200 rounded-full overflow-hidden border border-gold-400/20">
+                    <div id="quest-progress-bar" class="h-full bg-gradient-to-r from-emerald-800 to-gold-500 transition-all duration-500 w-[16.6%]"></div>
+                </div>
+            </div>
+
+            <!-- QUEST STAGE CONTAINERS -->
+            <div id="quest-card-wrapper" class="bg-white rounded-3xl p-6 sm:p-10 border-2 border-gold-400/30 shadow-xl relative overflow-hidden">
+
+                <!-- QUEST 1: TRIVIA -->
+                <div id="quest-stage-1" class="space-y-6">
+                    <div class="flex items-center gap-2 text-gold-600 text-sm font-semibold uppercase tracking-wider">
+                        <i data-lucide="help-circle" class="w-4 h-4"></i> Trivia Challenge
+                    </div>
+                    <h3 class="font-serif text-2xl sm:text-3xl font-bold text-emerald-950" id="q1-question-text">
+                        Where did Chukwudi and Amarachi first cross paths?
+                    </h3>
+                    <div id="q1-options-container" class="space-y-3">
+                        <!-- Options injected dynamically from config -->
+                    </div>
+                    <div id="q1-feedback" class="hidden p-4 rounded-xl text-sm font-medium"></div>
+                </div>
+
+                <!-- QUEST 2: NAME UNLOCK SCRAMBLE -->
+                <div id="quest-stage-2" class="hidden space-y-6">
+                    <div class="flex items-center gap-2 text-gold-600 text-sm font-semibold uppercase tracking-wider">
+                        <i data-lucide="lock" class="w-4 h-4"></i> Name Reveal Puzzle
+                    </div>
+                    <h3 class="font-serif text-2xl sm:text-3xl font-bold text-emerald-950">
+                        Unlock the Bride's Name
+                    </h3>
+                    <p id="q2-clue-text" class="text-slate-600 text-sm">
+                        Unscramble the bride's beautiful Igbo name meaning "God's Grace":
+                    </p>
+                    <div id="q2-letters-board" class="flex flex-wrap gap-2 justify-center my-6">
+                        <!-- Interactive Letter Tiles generated by JS -->
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <input type="text" id="q2-input" uppercase placeholder="TYPE NAME HERE..." class="flex-1 px-4 py-3 rounded-xl border border-gold-400/50 uppercase font-bold tracking-widest text-center focus:ring-2 focus:ring-emerald-800 outline-none">
+                        <button onclick="verifyQuest2()" class="px-6 py-3 bg-emerald-800 text-gold-300 font-bold rounded-xl hover:bg-emerald-900 transition-colors">Submit</button>
+                    </div>
+                    <div id="q2-feedback" class="hidden p-4 rounded-xl text-sm font-medium"></div>
+                </div>
+
+                <!-- QUEST 3: DATE CALENDAR PICKER -->
+                <div id="quest-stage-3" class="hidden space-y-6">
+                    <div class="flex items-center gap-2 text-gold-600 text-sm font-semibold uppercase tracking-wider">
+                        <i data-lucide="calendar" class="w-4 h-4"></i> Calendar Discovery
+                    </div>
+                    <h3 class="font-serif text-2xl sm:text-3xl font-bold text-emerald-950">
+                        Find the Traditional Marriage Date
+                    </h3>
+                    <p class="text-slate-600 text-sm">Select the correct Saturday in November 2026 when our traditional wedding celebration begins!</p>
+
+                    <!-- Mini Calendar Grid for Nov 2026 -->
+                    <div class="max-w-sm mx-auto bg-ivory-100 p-4 rounded-2xl border border-gold-400/40">
+                        <div class="text-center font-serif font-bold text-emerald-900 mb-3">November 2026</div>
+                        <div class="grid grid-cols-7 gap-1 text-center text-xs font-bold text-slate-500 mb-2">
+                            <span>S</span><span>M</span><span>T</span><span>W</span><span>T</span><span>F</span><span>S</span>
+                        </div>
+                        <div id="nov-calendar-grid" class="grid grid-cols-7 gap-1">
+                            <!-- Dynamic Calendar Days injected JS -->
+                        </div>
+                    </div>
+                    <div id="q3-feedback" class="hidden p-4 rounded-xl text-sm font-medium"></div>
+                </div>
+
+                <!-- QUEST 4: COLOUR SWATCH MATCH -->
+                <div id="quest-stage-4" class="hidden space-y-6">
+                    <div class="flex items-center gap-2 text-gold-600 text-sm font-semibold uppercase tracking-wider">
+                        <i data-lucide="palette" class="w-4 h-4"></i> Theme Palette Discovery
+                    </div>
+                    <h3 class="font-serif text-2xl sm:text-3xl font-bold text-emerald-950">
+                        Select Our Official Royal Wedding Colours
+                    </h3>
+                    <p class="text-slate-600 text-sm">Identify the authentic royal Igbo wedding theme chosen by Chukwudi &amp; Amarachi:</p>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <button onclick="verifyQuest4('emerald-gold')" class="p-4 rounded-2xl border-2 border-slate-200 hover:border-gold-500 transition-all text-left flex items-center gap-4 group">
+                            <div class="flex -space-x-2 overflow-hidden">
+                                <span class="inline-block w-8 h-8 rounded-full bg-[#0B5D45]"></span>
+                                <span class="inline-block w-8 h-8 rounded-full bg-[#D6B56D]"></span>
+                                <span class="inline-block w-8 h-8 rounded-full bg-[#FFF8E9] border border-slate-300"></span>
+                            </div>
+                            <div>
+                                <span class="block font-bold text-slate-800 group-hover:text-emerald-900">Emerald Green, Champagne Gold &amp; Ivory</span>
+                                <span class="text-xs text-slate-500">Official Couple Choice</span>
+                            </div>
+                        </button>
+
+                        <button onclick="verifyQuest4('burgundy-gold')" class="p-4 rounded-2xl border-2 border-slate-200 hover:border-gold-500 transition-all text-left flex items-center gap-4 group">
+                            <div class="flex -space-x-2 overflow-hidden">
+                                <span class="inline-block w-8 h-8 rounded-full bg-rose-900"></span>
+                                <span class="inline-block w-8 h-8 rounded-full bg-amber-400"></span>
+                                <span class="inline-block w-8 h-8 rounded-full bg-slate-100"></span>
+                            </div>
+                            <div>
+                                <span class="block font-bold text-slate-800">Burgundy Wine &amp; Warm Amber</span>
+                                <span class="text-xs text-slate-500">Alternative Palette</span>
+                            </div>
+                        </button>
+                    </div>
+                    <div id="q4-feedback" class="hidden p-4 rounded-xl text-sm font-medium"></div>
+                </div>
+
+                <!-- QUEST 5: LOCATION SELECTOR -->
+                <div id="quest-stage-5" class="hidden space-y-6">
+                    <div class="flex items-center gap-2 text-gold-600 text-sm font-semibold uppercase tracking-wider">
+                        <i data-lucide="map-pin" class="w-4 h-4"></i> Venue Location Challenge
+                    </div>
+                    <h3 class="font-serif text-2xl sm:text-3xl font-bold text-emerald-950">
+                        In Which Nigerian City Will the Celebration Take Place?
+                    </h3>
+
+                    <div id="q5-options-grid" class="grid grid-cols-2 sm:grid-cols-4 gap-3">
+                        <!-- Location Buttons injected JS -->
+                    </div>
+                    <div id="q5-feedback" class="hidden p-4 rounded-xl text-sm font-medium"></div>
+                </div>
+
+                <!-- QUEST 6: FINAL WISH CHALLENGE -->
+                <div id="quest-stage-6" class="hidden space-y-6 text-center">
+                    <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-gold-400/20 text-gold-600 text-xs font-bold uppercase">
+                        <i data-lucide="heart" class="w-4 h-4"></i> Final Celebration Quest
+                    </div>
+                    <h3 class="font-serif text-3xl sm:text-4xl font-bold text-emerald-950">
+                        Choose Your Favorite Blessing For The Couple
+                    </h3>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 max-w-xl mx-auto text-left">
+                        <button onclick="finishLoveQuest('A lifetime of overflowing joy & laughter')" class="p-4 rounded-xl bg-ivory-100 border border-gold-400/40 hover:bg-gold-400 hover:text-emerald-950 font-medium transition-all">
+                            ✨ A lifetime of overflowing joy &amp; laughter
+                        </button>
+                        <button onclick="finishLoveQuest('Endless prosperity & divine blessings')" class="p-4 rounded-xl bg-ivory-100 border border-gold-400/40 hover:bg-gold-400 hover:text-emerald-950 font-medium transition-all">
+                            👑 Endless prosperity &amp; divine blessings
+                        </button>
+                        <button onclick="finishLoveQuest('Unshakable love, peace & companionship')" class="p-4 rounded-xl bg-ivory-100 border border-gold-400/40 hover:bg-gold-400 hover:text-emerald-950 font-medium transition-all">
+                            🕊️ Unshakable love, peace &amp; companionship
+                        </button>
+                        <button onclick="finishLoveQuest('All of the above & more!')" class="p-4 rounded-xl bg-ivory-100 border border-gold-400/40 hover:bg-gold-400 hover:text-emerald-950 font-medium transition-all">
+                            💖 All of the above &amp; more!
+                        </button>
+                    </div>
+                </div>
+
+                <!-- SUCCESS CELEBRATION MODAL IN QUEST -->
+                <div id="quest-completed-banner" class="hidden text-center space-y-6 py-6">
+                    <div class="inline-flex items-center justify-center w-20 h-20 rounded-full bg-emerald-800 text-gold-400 shadow-xl ring-4 ring-gold-400/30">
+                        <i data-lucide="award" class="w-10 h-10"></i>
+                    </div>
+                    <h3 class="font-serif text-3xl sm:text-4xl font-bold text-emerald-900">You Have Unlocked The Invitation!</h3>
+                    <p class="text-slate-600 max-w-md mx-auto text-sm">
+                        Congratulations! You are officially ready to join Chukwudi &amp; Amarachi in Awka for an unforgettable Igbo wedding experience.
+                    </p>
+                    <div class="flex flex-wrap justify-center gap-3 pt-2">
+                        <a href="#schedule" class="px-6 py-3 rounded-xl bg-emerald-800 text-gold-300 font-bold hover:bg-emerald-900 transition-colors">View Event Schedule</a>
+                        <a href="#rsvp" class="px-6 py-3 rounded-xl bg-gold-400 text-emerald-950 font-bold hover:bg-gold-500 transition-colors">Confirm Attendance</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- OUR LOVE STORY TIMELINE -->
+    <section id="story" class="py-20 px-4 bg-ivory-100 relative">
+        <div class="max-w-4xl mx-auto">
+            <div class="text-center space-y-2 mb-16">
+                <span class="font-script text-3xl text-gold-600">How It All Began</span>
+                <h2 class="font-serif text-4xl sm:text-5xl font-bold text-emerald-950">Our Love Story</h2>
+                <div class="w-16 h-1 bg-gold-400 mx-auto rounded-full mt-2"></div>
+            </div>
+
+            <!-- Timeline Vertical Wrapper -->
+            <div class="relative border-l-2 border-gold-400/50 ml-4 md:ml-1/2 space-y-12">
+                
+                <!-- Timeline Item 1 -->
+                <div class="relative pl-8 md:pl-0 md:flex md:items-center group">
+                    <div class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-emerald-800 border-2 border-gold-400 group-hover:scale-125 transition-transform"></div>
+                    <div class="md:w-1/2 md:pr-10 md:text-right">
+                        <span class="text-xs font-bold uppercase tracking-widest text-gold-600">December 2022</span>
+                        <h3 class="font-serif text-2xl font-bold text-emerald-900 mt-1">First Crossing Paths</h3>
+                        <p class="text-slate-600 text-sm mt-2 leading-relaxed">
+                            A chance encounter at a mutual friend's celebration in Lagos sparked an instant connection. Shared stories and endless laughter set the foundation for a lifelong friendship.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Timeline Item 2 -->
+                <div class="relative pl-8 md:pl-0 md:flex md:items-center group">
+                    <div class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-emerald-800 border-2 border-gold-400 group-hover:scale-125 transition-transform"></div>
+                    <div class="md:w-1/2 md:ml-auto md:pl-10">
+                        <span class="text-xs font-bold uppercase tracking-widest text-gold-600">August 2023</span>
+                        <h3 class="font-serif text-2xl font-bold text-emerald-900 mt-1">The Friendship Blossom</h3>
+                        <p class="text-slate-600 text-sm mt-2 leading-relaxed">
+                            Late-night phone conversations, shared Sunday meals, and unwavering support through life's milestones made it clear that they were meant to walk through life together.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Timeline Item 3 -->
+                <div class="relative pl-8 md:pl-0 md:flex md:items-center group">
+                    <div class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-emerald-800 border-2 border-gold-400 group-hover:scale-125 transition-transform"></div>
+                    <div class="md:w-1/2 md:pr-10 md:text-right">
+                        <span class="text-xs font-bold uppercase tracking-widest text-gold-600">December 2025</span>
+                        <h3 class="font-serif text-2xl font-bold text-emerald-900 mt-1">The Sunset Proposal</h3>
+                        <p class="text-slate-600 text-sm mt-2 leading-relaxed">
+                            Chukwudi popped the question during an intimate family gathering. With tears of joy and full hearts, Amarachi whispered "Yes" to forever!
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- WEDDING EVENT SCHEDULE -->
+    <section id="schedule" class="py-20 px-4 bg-emerald-950 text-ivory-100 relative">
+        <div class="max-w-5xl mx-auto">
+            
+            <div class="text-center space-y-3 mb-16">
+                <span class="font-script text-3xl text-gold-400">Celebration Details</span>
+                <h2 class="font-serif text-4xl sm:text-5xl font-bold text-ivory-50">Wedding Event Schedule</h2>
+                <p class="text-slate-300 max-w-xl mx-auto text-sm">Join us for two joyous days of tradition, love, and cultural celebration in Awka, Anambra State.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                
+                <!-- CARD 1: TRADITIONAL WEDDING (IGBA NKWU) -->
+                <div class="bg-emerald-900/80 rounded-3xl p-6 sm:p-8 border border-gold-400/40 shadow-2xl relative overflow-hidden flex flex-col justify-between">
+                    <div class="space-y-4">
+                        <div class="inline-block px-3 py-1 rounded-full bg-gold-400/20 text-gold-300 text-xs font-bold uppercase tracking-wider">
+                            Day 1 • Cultural Ceremony
+                        </div>
+                        <h3 class="font-serif text-3xl font-bold text-gold-400">Traditional Marriage (Igba Nkwu)</h3>
+                        <p class="text-slate-300 text-sm">Experience authentic Igbo cultural rites, wine carrying ceremony, traditional drumming, and lavish hospitality.</p>
+                        
+                        <div class="space-y-3 pt-4 border-t border-gold-400/20 text-sm">
+                            <div class="flex items-start gap-3">
+                                <i data-lucide="calendar" class="w-5 h-5 text-gold-400 shrink-0 mt-0.5"></i>
+                                <div>
+                                    <span class="font-bold block text-ivory-100">Saturday, 14th November 2026</span>
+                                    <span class="text-xs text-slate-300">10:00 AM WAT Prompt</span>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <i data-lucide="map-pin" class="w-5 h-5 text-gold-400 shrink-0 mt-0.5"></i>
+                                <div>
+                                    <span class="font-bold block text-ivory-100" id="trad-venue-text">Golden Crest Event Centre</span>
+                                    <span class="text-xs text-slate-300">Awka, Anambra State, Nigeria</span>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <i data-lucide="shirt" class="w-5 h-5 text-gold-400 shrink-0 mt-0.5"></i>
+                                <div>
+                                    <span class="font-bold block text-ivory-100">Dress Code</span>
+                                    <span class="text-xs text-slate-300">Traditional Igbo Attire / Emerald Green &amp; Champagne Gold Asoebi</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="pt-6 mt-6 border-t border-gold-400/20 flex gap-3">
+                        <button onclick="openMapDirections('Golden Crest Event Centre, Awka')" class="flex-1 py-2.5 rounded-xl bg-gold-400 text-emerald-950 font-bold text-xs hover:bg-gold-500 transition-colors text-center">
+                            Get Map Directions
+                        </button>
+                    </div>
+                </div>
+
+                <!-- CARD 2: WHITE WEDDING & RECEPTION -->
+                <div class="bg-emerald-900/80 rounded-3xl p-6 sm:p-8 border border-gold-400/40 shadow-2xl relative overflow-hidden flex flex-col justify-between">
+                    <div class="space-y-4">
+                        <div class="inline-block px-3 py-1 rounded-full bg-gold-400/20 text-gold-300 text-xs font-bold uppercase tracking-wider">
+                            Day 2 • Holy Solemnization &amp; Reception
+                        </div>
+                        <h3 class="font-serif text-3xl font-bold text-gold-400">White Wedding &amp; Grand Reception</h3>
+                        <p class="text-slate-300 text-sm">Join us as we exchange vows in church followed by a grand banquet celebration of music and dancing.</p>
+                        
+                        <div class="space-y-3 pt-4 border-t border-gold-400/20 text-sm">
+                            <div class="flex items-start gap-3">
+                                <i data-lucide="calendar" class="w-5 h-5 text-gold-400 shrink-0 mt-0.5"></i>
+                                <div>
+                                    <span class="font-bold block text-ivory-100">Sunday, 15th November 2026</span>
+                                    <span class="text-xs text-slate-300">10:00 AM (Church) | 1:00 PM (Reception)</span>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <i data-lucide="church" class="w-5 h-5 text-gold-400 shrink-0 mt-0.5"></i>
+                                <div>
+                                    <span class="font-bold block text-ivory-100" id="white-venue-text">Church Solemnization Venue</span>
+                                    <span class="text-xs text-slate-300">Awka, Anambra State (Demo Venue)</span>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <i data-lucide="sparkles" class="w-5 h-5 text-gold-400 shrink-0 mt-0.5"></i>
+                                <div>
+                                    <span class="font-bold block text-ivory-100">Grand Reception</span>
+                                    <span class="text-xs text-slate-300">Golden Crest Executive Ballroom, Awka</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="pt-6 mt-6 border-t border-gold-400/20 flex gap-3">
+                        <button onclick="addToGoogleCalendar()" class="flex-1 py-2.5 rounded-xl bg-gold-400 text-emerald-950 font-bold text-xs hover:bg-gold-500 transition-colors text-center">
+                            Add to Calendar
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- FASHION & DRESS CODE INSPIRATION -->
+    <section id="fashion" class="py-20 px-4 bg-ivory-50 relative">
+        <div class="max-w-5xl mx-auto space-y-12">
+            
+            <div class="text-center space-y-3">
+                <span class="font-script text-3xl text-gold-600">Asoebi &amp; Attire</span>
+                <h2 class="font-serif text-4xl sm:text-5xl font-bold text-emerald-950">Dress Code Inspiration</h2>
+                <p class="text-slate-600 max-w-lg mx-auto text-sm">
+                    We invite our guests to celebrate with us in elegant Emerald Green and Champagne Gold attire.
+                </p>
+            </div>
+
+            <!-- Color Palette Swatches -->
+            <div class="bg-ivory-100 p-6 rounded-2xl border border-gold-400/30 flex flex-wrap items-center justify-between gap-4 max-w-2xl mx-auto shadow-sm">
+                <div class="flex items-center gap-3">
+                    <span class="w-10 h-10 rounded-full bg-[#0B5D45] shadow-md ring-2 ring-gold-400"></span>
+                    <div>
+                        <span class="block font-bold text-slate-800 text-sm">Emerald Green</span>
+                        <span class="text-xs text-slate-500">#0B5D45</span>
+                    </div>
+                </div>
+                <div class="flex items-center gap-3">
+                    <span class="w-10 h-10 rounded-full bg-[#D6B56D] shadow-md ring-2 ring-gold-400"></span>
+                    <div>
+                        <span class="block font-bold text-slate-800 text-sm">Champagne Gold</span>
+                        <span class="text-xs text-slate-500">#D6B56D</span>
+                    </div>
+                </div>
+                <div class="flex items-center gap-3">
+                    <span class="w-10 h-10 rounded-full bg-[#FFF8E9] shadow-md border border-slate-300"></span>
+                    <div>
+                        <span class="block font-bold text-slate-800 text-sm">Warm Ivory</span>
+                        <span class="text-xs text-slate-500">#FFF8E9</span>
+                    </div>
+                </div>
+                <button onclick="copyColorCodes()" class="px-4 py-2 rounded-xl bg-emerald-800 text-gold-300 font-bold text-xs hover:bg-emerald-900 transition-colors">
+                    Copy Color Palette
+                </button>
+            </div>
+
+            <!-- Fashion Inspiration Cards -->
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
+                <div class="bg-white rounded-2xl p-4 border border-gold-400/30 shadow-md space-y-3">
+                    <div class="h-64 rounded-xl overflow-hidden bg-slate-100">
+                        <img src="https://images.unsplash.com/photo-1583939003579-730e3918a45a?auto=format&fit=crop&w=600&q=80" alt="Igbo Groom Attire" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <h3 class="font-serif font-bold text-lg text-emerald-900">Igbo Traditional Attire</h3>
+                    <p class="text-slate-600 text-xs">George fabric wrapper with Isiagu top, coral beads, and red cap/fila accent.</p>
+                </div>
+
+                <div class="bg-white rounded-2xl p-4 border border-gold-400/30 shadow-md space-y-3">
+                    <div class="h-64 rounded-xl overflow-hidden bg-slate-100">
+                        <img src="https://images.unsplash.com/photo-1537633552985-df8429e8048b?auto=format&fit=crop&w=600&q=80" alt="Bride Gele & Coral Beads" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <h3 class="font-serif font-bold text-lg text-emerald-900">Gele &amp; Coral Elegance</h3>
+                    <p class="text-slate-600 text-xs">Sculpted auto-gele headtie paired with royal coral bead necklaces and gold cuffs.</p>
+                </div>
+
+                <div class="bg-white rounded-2xl p-4 border border-gold-400/30 shadow-md space-y-3">
+                    <div class="h-64 rounded-xl overflow-hidden bg-slate-100">
+                        <img src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=600&q=80" alt="White Wedding Attire" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <h3 class="font-serif font-bold text-lg text-emerald-900">Formal Banquet Wear</h3>
+                    <p class="text-slate-600 text-xs">Tailored tuxedo suits for gentlemen and elegant emerald/gold evening gowns for ladies.</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- PHOTO GALLERY SECTION -->
+    <section id="gallery" class="py-20 px-4 bg-ivory-100 relative">
+        <div class="max-w-6xl mx-auto space-y-12">
+            
+            <div class="text-center space-y-3">
+                <span class="font-script text-3xl text-gold-600">Captured Moments</span>
+                <h2 class="font-serif text-4xl sm:text-5xl font-bold text-emerald-950">Pre-Wedding Photo Wall</h2>
+            </div>
+
+            <!-- Image Grid -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <div onclick="openLightbox('https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&w=1200&q=80', 'Pre-wedding couple portrait')" class="h-64 rounded-2xl overflow-hidden cursor-pointer group relative shadow-md">
+                    <img src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&w=600&q=80" alt="Pre-wedding" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-emerald-950/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white">
+                        <i data-lucide="zoom-in" class="w-8 h-8"></i>
+                    </div>
+                </div>
+
+                <div onclick="openLightbox('https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1200&q=80', 'Romantic moment')" class="h-64 rounded-2xl overflow-hidden cursor-pointer group relative shadow-md">
+                    <img src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=600&q=80" alt="Pre-wedding 2" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-emerald-950/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white">
+                        <i data-lucide="zoom-in" class="w-8 h-8"></i>
+                    </div>
+                </div>
+
+                <div onclick="openLightbox('https://images.unsplash.com/photo-1583939003579-730e3918a45a?auto=format&fit=crop&w=1200&q=80', 'Traditional outfit detail')" class="h-64 rounded-2xl overflow-hidden cursor-pointer group relative shadow-md">
+                    <img src="https://images.unsplash.com/photo-1583939003579-730e3918a45a?auto=format&fit=crop&w=600&q=80" alt="Pre-wedding 3" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-emerald-950/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white">
+                        <i data-lucide="zoom-in" class="w-8 h-8"></i>
+                    </div>
+                </div>
+
+                <div onclick="openLightbox('https://images.unsplash.com/photo-1537633552985-df8429e8048b?auto=format&fit=crop&w=1200&q=80', 'Traditional celebration')" class="h-64 rounded-2xl overflow-hidden cursor-pointer group relative shadow-md">
+                    <img src="https://images.unsplash.com/photo-1537633552985-df8429e8048b?auto=format&fit=crop&w=600&q=80" alt="Pre-wedding 4" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-emerald-950/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white">
+                        <i data-lucide="zoom-in" class="w-8 h-8"></i>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- LIGHTBOX MODAL -->
+    <div id="lightbox-modal" class="fixed inset-0 z-50 hidden bg-black/90 flex items-center justify-center p-4">
+        <button onclick="closeLightbox()" class="absolute top-6 right-6 text-white hover:text-gold-400 p-2 focus:outline-none">
+            <i data-lucide="x" class="w-8 h-8"></i>
+        </button>
+        <div class="max-w-4xl w-full text-center space-y-3">
+            <img id="lightbox-img" src="" alt="Enlarged portrait" class="max-h-[80vh] mx-auto rounded-2xl object-contain shadow-2xl">
+            <p id="lightbox-caption" class="text-ivory-100 font-serif text-lg"></p>
+        </div>
+    </div>
+
+    <!-- IGBO CULTURAL FEATURE: NAIRA SPRAY SIMULATOR -->
+    <section id="spray-section" class="py-20 px-4 bg-emerald-950 text-ivory-100 relative overflow-hidden">
+        <div class="max-w-4xl mx-auto text-center space-y-6 relative z-10">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-gold-400/20 text-gold-300 text-xs font-bold uppercase tracking-widest">
+                <i data-lucide="banknote" class="w-4 h-4"></i> Igbo Celebration Feature
+            </div>
+
+            <h2 class="font-serif text-4xl sm:text-5xl font-bold text-gold-400">Virtual Naira Spraying Simulator</h2>
+            <p class="text-slate-300 max-w-xl mx-auto text-sm sm:text-base">
+                In authentic Nigerian wedding tradition, showering the couple with crisp money symbolizes wealth, blessings, and goodwill. Click or tap below to spray virtual ₦1000 notes!
+            </p>
+
+            <div class="py-8">
+                <button onclick="sprayNairaNotes()" class="group relative inline-flex items-center justify-center px-10 py-5 rounded-full bg-gradient-to-r from-emerald-800 via-gold-500 to-emerald-800 text-emerald-950 font-bold text-xl shadow-2xl hover:scale-105 active:scale-95 transition-all ring-4 ring-gold-400/40">
+                    <i data-lucide="sparkles" class="w-6 h-6 mr-2 text-emerald-950"></i>
+                    <span>SPRAY ₦1000 NOTES</span>
+                </button>
+            </div>
+
+            <div class="text-xs text-gold-300 font-mono">
+                Total Sprayed Good Fortune: <span id="naira-counter" class="text-lg font-bold text-white">₦0</span>
+            </div>
+        </div>
+
+        <!-- Floating Notes Container -->
+        <div id="naira-spray-container" class="absolute inset-0 pointer-events-none z-0"></div>
+    </section>
+
+    <!-- INTERACTIVE RSVP FORM -->
+    <section id="rsvp" class="py-20 px-4 bg-ivory-100 relative">
+        <div class="max-w-3xl mx-auto">
+            
+            <div class="bg-white rounded-3xl p-6 sm:p-10 border-2 border-gold-400/30 shadow-2xl relative">
+                
+                <div class="text-center space-y-3 mb-8">
+                    <span class="font-script text-3xl text-gold-600">Join Our Celebration</span>
+                    <h2 class="font-serif text-3xl sm:text-4xl font-bold text-emerald-950">Confirm Attendance (RSVP)</h2>
+                    <p class="text-slate-600 text-sm">Please respond by October 15, 2026 to help us reserve your seat.</p>
+                </div>
+
+                <form id="rsvp-form" onsubmit="handleRSVPSubmit(event)" class="space-y-6">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1">Full Name *</label>
+                            <input type="text" required id="rsvp-name" placeholder="e.g. Chief Emeka Anyaoku" class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-emerald-800 outline-none text-sm">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1">Phone / WhatsApp *</label>
+                            <input type="tel" required id="rsvp-phone" placeholder="+234 801 234 5678" class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-emerald-800 outline-none text-sm">
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1">Will You Attend? *</label>
+                            <select id="rsvp-status" required class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-emerald-800 outline-none text-sm">
+                                <option value="Yes">Joyfully Attending</option>
+                                <option value="Regretfully Decline">Regretfully Decline</option>
+                                <option value="Undecided">Undecided Yet</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1">Which Events? *</label>
+                            <select id="rsvp-events" required class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-emerald-800 outline-none text-sm">
+                                <option value="Both Events">Both Traditional &amp; White Wedding</option>
+                                <option value="Traditional Wedding Only">Traditional Marriage Only (Nov 14)</option>
+                                <option value="White Wedding Only">White Wedding Only (Nov 15)</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1">Number of Guests</label>
+                            <input type="number" min="1" max="4" value="1" id="rsvp-guests" class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-emerald-800 outline-none text-sm">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1">Dietary Preferences / Notes</label>
+                            <input type="text" id="rsvp-dietary" placeholder="e.g. Vegetarian, No pepper" class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-emerald-800 outline-none text-sm">
+                        </div>
+                    </div>
+
+                    <div>
+                        <label class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1">Romantic Message / Wish for Couple</label>
+                        <textarea id="rsvp-message" rows="3" placeholder="Write a warm congratulatory wish..." class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-emerald-800 outline-none text-sm"></textarea>
+                    </div>
+
+                    <button type="submit" class="w-full py-4 rounded-xl bg-emerald-800 text-gold-300 font-bold text-base hover:bg-emerald-900 shadow-xl transition-all">
+                        Submit RSVP Confirmation
+                    </button>
+                </form>
+
+                <!-- RSVP Confirmation Success Banner -->
+                <div id="rsvp-success-banner" class="hidden text-center space-y-4 py-8">
+                    <div class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-emerald-800 text-gold-400">
+                        <i data-lucide="check" class="w-8 h-8"></i>
+                    </div>
+                    <h3 class="font-serif text-2xl font-bold text-emerald-950">RSVP Received!</h3>
+                    <p class="text-slate-600 text-sm max-w-md mx-auto">
+                        Thank you for confirming your attendance. Your response has been saved locally for demo purposes.
+                    </p>
+                    <button onclick="resetRSVPForm()" class="px-4 py-2 text-xs font-bold text-emerald-800 underline">Submit Another Response</button>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- GUESTBOOK & LOVE NOTES BOARD -->
+    <section id="guestbook" class="py-20 px-4 bg-ivory-50 relative">
+        <div class="max-w-5xl mx-auto space-y-12">
+            
+            <div class="text-center space-y-3">
+                <span class="font-script text-3xl text-gold-600">Words of Love</span>
+                <h2 class="font-serif text-4xl sm:text-5xl font-bold text-emerald-950">Guestbook &amp; Warm Wishes</h2>
+                <p class="text-slate-600 max-w-lg mx-auto text-sm">Leave a heartfelt love note for Chukwudi &amp; Amarachi.</p>
+            </div>
+
+            <!-- Add Guestbook Form -->
+            <div class="bg-white p-6 rounded-2xl border border-gold-400/40 shadow-md max-w-2xl mx-auto space-y-4">
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <input type="text" id="gb-author" placeholder="Your Name" class="px-4 py-2.5 rounded-xl border border-slate-300 text-sm outline-none focus:ring-2 focus:ring-emerald-800">
+                    <input type="text" id="gb-location" placeholder="Your Location (e.g. Enugu / London)" class="px-4 py-2.5 rounded-xl border border-slate-300 text-sm outline-none focus:ring-2 focus:ring-emerald-800">
+                </div>
+                <textarea id="gb-message" rows="3" placeholder="Write your warm wish for the couple..." class="w-full px-4 py-2.5 rounded-xl border border-slate-300 text-sm outline-none focus:ring-2 focus:ring-emerald-800"></textarea>
+                <button onclick="addGuestbookEntry()" class="w-full py-3 rounded-xl bg-emerald-800 text-gold-300 font-bold text-sm hover:bg-emerald-900 transition-colors">
+                    Post Wish to Guestbook
+                </button>
+            </div>
+
+            <!-- Guestbook Notes Grid -->
+            <div id="guestbook-grid" class="grid grid-cols-1 sm:grid-cols-3 gap-6">
+                <!-- Dynamically Rendered JS Notes -->
+            </div>
+
+        </div>
+    </section>
+
+    <!-- DIGITAL SHAREABLE INVITATION CARD GENERATOR -->
+    <section id="share" class="py-20 px-4 bg-emerald-950 text-ivory-100 relative">
+        <div class="max-w-4xl mx-auto text-center space-y-8">
+            <div class="space-y-3">
+                <span class="font-script text-3xl text-gold-400">Spread The Joy</span>
+                <h2 class="font-serif text-4xl sm:text-5xl font-bold text-ivory-50">Share The Invitation</h2>
+                <p class="text-slate-300 max-w-md mx-auto text-sm">
+                    Invite family and friends on WhatsApp or social media with our prefilled message or copy invitation link.
+                </p>
+            </div>
+
+            <div class="flex flex-wrap justify-center gap-4">
+                <button onclick="shareOnWhatsApp()" class="px-6 py-3 rounded-xl bg-emerald-600 text-white font-bold text-sm hover:bg-emerald-700 transition-colors flex items-center gap-2">
+                    <i data-lucide="message-circle" class="w-5 h-5"></i>
+                    <span>Share on WhatsApp</span>
+                </button>
+                <button onclick="copyInvitationLink()" class="px-6 py-3 rounded-xl bg-gold-400 text-emerald-950 font-bold text-sm hover:bg-gold-500 transition-colors flex items-center gap-2">
+                    <i data-lucide="copy" class="w-5 h-5"></i>
+                    <span>Copy Invitation Link</span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-emerald-950 text-ivory-200 py-12 px-4 border-t border-gold-400/30">
+        <div class="max-w-6xl mx-auto text-center space-y-6">
+            <div class="font-serif text-2xl font-bold text-gold-400">Chukwudi &amp; Amarachi 2026</div>
+            <p class="text-xs text-slate-400">Made with love for Chukwudi Okafor &amp; Amarachi Nwankwo • Awka, Anambra State, Nigeria</p>
+            <p class="text-[10px] text-slate-500 uppercase tracking-widest">A celebration of love, family, and forever.</p>
+        </div>
+    </footer>
+
+    <!-- MAIN JAVASCRIPT LOGIC -->
+    <script>
+        // GLOBAL APP STATE & LOCALSTORAGE PERSISTENCE
+        let appState = {
+            questStep: 1,
+            questCompleted: false,
+            soundFxEnabled: true,
+            nairaSprayedTotal: 0
+        };
+
+        // On DOM Loaded
+        document.addEventListener('DOMContentLoaded', () => {
+            lucide.createIcons();
+            loadLocalStorageData();
+            initCountdown();
+            renderQuestStage();
+            renderGuestbookEntries();
+            updateVenueConfigUI();
+        });
+
+        // Load Config Values into UI
+        function updateVenueConfigUI() {
+            document.getElementById('trad-venue-text').innerText = WEDDING_CONFIG.tradVenue;
+            document.getElementById('white-venue-text').innerText = WEDDING_CONFIG.whiteVenue;
+            document.getElementById('hero-hashtag').innerText = WEDDING_CONFIG.hashtag;
+        }
+
+        // 1. ENVELOPE OPENING EXPERIENCE
+        function triggerEnvelopeOpen() {
+            SoundFX.playSealPop();
+            setTimeout(() => SoundFX.playChime(), 300);
+
+            const overlay = document.getElementById('envelope-overlay');
+            const card = document.getElementById('envelope-card');
+            
+            card.classList.add('scale-105', 'opacity-0');
+            overlay.classList.add('opacity-0', 'pointer-events-none');
+
+            setTimeout(() => {
+                overlay.style.display = 'none';
+                document.getElementById('main-nav').classList.remove('-translate-y-full');
+            }, 800);
+        }
+
+        function openInvitationDirectly() {
+            document.getElementById('envelope-overlay').style.display = 'none';
+            document.getElementById('main-nav').classList.remove('-translate-y-full');
+        }
+
+        function toggleAudioFx() {
+            appState.soundFxEnabled = !appState.soundFxEnabled;
+            document.getElementById('sound-icon-on').classList.toggle('hidden', !appState.soundFxEnabled);
+            document.getElementById('sound-icon-off').classList.toggle('hidden', appState.soundFxEnabled);
+        }
+
+        function toggleMobileMenu() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        }
+
+        // 2. LIVE COUNTDOWN TIMER
+        function initCountdown() {
+            const targetDate = new Date(WEDDING_CONFIG.tradDateIso).getTime();
+
+            function update() {
+                const now = new Date().getTime();
+                const diff = targetDate - now;
+
+                if (diff <= 0) {
+                    document.getElementById('countdown-grid').innerHTML = `
+                        <div class="col-span-4 p-4 rounded-xl bg-gold-400 text-emerald-950 font-bold text-center">
+                            🎉 Celebration in Progress! Welcome to Awka!
+                        </div>`;
+                    return;
+                }
+
+                const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const mins = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+                const secs = Math.floor((diff % (1000 * 60)) / 1000);
+
+                document.getElementById('cd-days').innerText = String(days).padStart(2, '0');
+                document.getElementById('cd-hours').innerText = String(hours).padStart(2, '0');
+                document.getElementById('cd-mins').innerText = String(mins).padStart(2, '0');
+                document.getElementById('cd-secs').innerText = String(secs).padStart(2, '0');
+            }
+
+            update();
+            setInterval(update, 1000);
+        }
+
+        // 3. THE LOVE QUEST MINI-GAME SYSTEM
+        function renderQuestStage() {
+            const step = appState.questStep;
+            document.getElementById('quest-current-step-num').innerText = Math.min(step, 6);
+            document.getElementById('quest-progress-bar').style.width = `${(step / 6) * 100}%`;
+
+            for (let i = 1; i <= 6; i++) {
+                const stage = document.getElementById(`quest-stage-${i}`);
+                if (stage) stage.classList.add('hidden');
+            }
+
+            if (appState.questCompleted) {
+                document.getElementById('quest-completed-banner').classList.remove('hidden');
+                return;
+            }
+
+            const currentStage = document.getElementById(`quest-stage-${step}`);
+            if (currentStage) currentStage.classList.remove('hidden');
+
+            // Render Stage Specific Elements
+            if (step === 1) renderQuest1();
+            if (step === 2) renderQuest2();
+            if (step === 3) renderQuest3();
+            if (step === 5) renderQuest5();
+        }
+
+        // Quest 1 Logic
+        function renderQuest1() {
+            const container = document.getElementById('q1-options-container');
+            const q = WEDDING_CONFIG.loveQuest.q1;
+            document.getElementById('q1-question-text').innerText = q.question;
+            
+            container.innerHTML = q.options.map((opt, idx) => `
+                <button onclick="verifyQuest1(${opt.correct})" class="w-full text-left p-4 rounded-xl border border-slate-200 hover:border-gold-500 hover:bg-ivory-100 font-medium text-slate-800 transition-all flex items-center justify-between">
+                    <span>${opt.text}</span>
+                    <i data-lucide="chevron-right" class="w-4 h-4 text-slate-400"></i>
+                </button>
+            `).join('');
+            lucide.createIcons();
+        }
+
+        function verifyQuest1(isCorrect) {
+            const fb = document.getElementById('q1-feedback');
+            fb.classList.remove('hidden');
+            if (isCorrect) {
+                if (appState.soundFxEnabled) SoundFX.playChime();
+                fb.className = "p-4 rounded-xl text-sm font-medium bg-emerald-100 text-emerald-900 border border-emerald-300";
+                fb.innerText = "✨ Correct! Chukwudi and Amarachi met at a mutual friend's celebration in Lagos!";
+                setTimeout(nextQuestStep, 1200);
+            } else {
+                fb.className = "p-4 rounded-xl text-sm font-medium bg-rose-100 text-rose-900 border border-rose-300";
+                fb.innerText = "❌ Oops! " + WEDDING_CONFIG.loveQuest.q1.hint;
+            }
+        }
+
+        // Quest 2 Logic
+        function renderQuest2() {
+            const board = document.getElementById('q2-letters-board');
+            const target = WEDDING_CONFIG.loveQuest.scrambleAnswer;
+            const scrambled = target.split('').sort(() => Math.random() - 0.5);
+            
+            board.innerHTML = scrambled.map(char => `
+                <span class="w-10 h-10 rounded-xl bg-emerald-800 text-gold-300 font-bold flex items-center justify-center text-lg shadow">
+                    ${char}
+                </span>
+            `).join('');
+        }
+
+        function verifyQuest2() {
+            const val = document.getElementById('q2-input').value.trim().toUpperCase();
+            const fb = document.getElementById('q2-feedback');
+            fb.classList.remove('hidden');
+
+            if (val === WEDDING_CONFIG.loveQuest.scrambleAnswer) {
+                if (appState.soundFxEnabled) SoundFX.playChime();
+                fb.className = "p-4 rounded-xl text-sm font-medium bg-emerald-100 text-emerald-900 border border-emerald-300";
+                fb.innerText = "🎉 Unlocked! The bride's name is Amarachi Nwankwo!";
+                setTimeout(nextQuestStep, 1200);
+            } else {
+                fb.className = "p-4 rounded-xl text-sm font-medium bg-rose-100 text-rose-900 border border-rose-300";
+                fb.innerText = "❌ Incorrect unscramble. Try typing: AMARACHI";
+            }
+        }
+
+        // Quest 3 Calendar Logic
+        function renderQuest3() {
+            const grid = document.getElementById('nov-calendar-grid');
+            let html = '';
+            for (let i = 1; i <= 30; i++) {
+                const isCorrect = (i === 14);
+                html += `
+                    <button onclick="verifyQuest3(${i})" class="h-10 rounded-lg flex items-center justify-center font-bold text-xs ${isCorrect ? 'bg-gold-400 text-emerald-950 hover:bg-gold-500' : 'bg-white text-slate-700 hover:bg-ivory-200'} border border-slate-200">
+                        ${i}
+                    </button>
+                `;
+            }
+            grid.innerHTML = html;
+        }
+
+        function verifyQuest3(dayNum) {
+            const fb = document.getElementById('q3-feedback');
+            fb.classList.remove('hidden');
+            if (dayNum === 14) {
+                if (appState.soundFxEnabled) SoundFX.playChime();
+                fb.className = "p-4 rounded-xl text-sm font-medium bg-emerald-100 text-emerald-900 border border-emerald-300";
+                fb.innerText = "✨ Correct! Saturday, 14th November 2026 is our Traditional Marriage date!";
+                setTimeout(nextQuestStep, 1200);
+            } else {
+                fb.className = "p-4 rounded-xl text-sm font-medium bg-rose-100 text-rose-900 border border-rose-300";
+                fb.innerText = "❌ Incorrect date. Hint: " + WEDDING_CONFIG.loveQuest.q3.hint;
+            }
+        }
+
+        // Quest 4 Palette
+        function verifyQuest4(paletteId) {
+            const fb = document.getElementById('q4-feedback');
+            fb.classList.remove('hidden');
+            if (paletteId === WEDDING_CONFIG.loveQuest.q4.correctPaletteId) {
+                if (appState.soundFxEnabled) SoundFX.playChime();
+                fb.className = "p-4 rounded-xl text-sm font-medium bg-emerald-100 text-emerald-900 border border-emerald-300";
+                fb.innerText = "🎨 Perfect Choice! Emerald Green, Champagne Gold, and Warm Ivory!";
+                setTimeout(nextQuestStep, 1200);
+            } else {
+                fb.className = "p-4 rounded-xl text-sm font-medium bg-rose-100 text-rose-900 border border-rose-300";
+                fb.innerText = "❌ Try selecting the Royal Emerald Green & Champagne Gold palette!";
+            }
+        }
+
+        // Quest 5 Location
+        function renderQuest5() {
+            const grid = document.getElementById('q5-options-grid');
+            const opts = WEDDING_CONFIG.loveQuest.q5.options;
+            grid.innerHTML = opts.map(loc => `
+                <button onclick="verifyQuest5('${loc}')" class="p-3 rounded-xl bg-ivory-100 border border-gold-400/40 text-slate-800 font-bold text-xs hover:bg-gold-400 hover:text-emerald-950 transition-all">
+                    ${loc}
+                </button>
+            `).join('');
+        }
+
+        function verifyQuest5(selectedLoc) {
+            const fb = document.getElementById('q5-feedback');
+            fb.classList.remove('hidden');
+            if (selectedLoc === WEDDING_CONFIG.loveQuest.q5.correctState) {
+                if (appState.soundFxEnabled) SoundFX.playChime();
+                fb.className = "p-4 rounded-xl text-sm font-medium bg-emerald-100 text-emerald-900 border border-emerald-300";
+                fb.innerText = "📍 Correct! Awka, Anambra State, Nigeria!";
+                setTimeout(nextQuestStep, 1200);
+            } else {
+                fb.className = "p-4 rounded-xl text-sm font-medium bg-rose-100 text-rose-900 border border-rose-300";
+                fb.innerText = "❌ Incorrect city. Select Awka, Anambra State!";
+            }
+        }
+
+        function finishLoveQuest(wishChosen) {
+            appState.questCompleted = true;
+            saveLocalStorageData();
+            if (typeof confetti === 'function') {
+                confetti({ particleCount: 120, spread: 80, origin: { y: 0.6 } });
+            }
+            renderQuestStage();
+        }
+
+        function nextQuestStep() {
+            appState.questStep++;
+            saveLocalStorageData();
+            renderQuestStage();
+        }
+
+        function skipAllQuests() {
+            appState.questCompleted = true;
+            saveLocalStorageData();
+            renderQuestStage();
+        }
+
+        function resetLoveQuest() {
+            appState.questStep = 1;
+            appState.questCompleted = false;
+            saveLocalStorageData();
+            renderQuestStage();
+        }
+
+        // 4. NAIRA SPRAY SIMULATOR
+        function sprayNairaNotes() {
+            if (appState.soundFxEnabled) SoundFX.playNairaCash();
+            appState.nairaSprayedTotal += 1000;
+            document.getElementById('naira-counter').innerText = `₦${appState.nairaSprayedTotal.toLocaleString()}`;
+
+            const container = document.getElementById('naira-spray-container');
+            const note = document.createElement('div');
+            note.className = 'absolute font-mono font-bold text-emerald-950 bg-emerald-100 border-2 border-gold-500 rounded px-2 py-1 shadow-lg text-xs animate-floatUpNaira';
+            note.style.left = `${Math.random() * 80 + 10}%`;
+            note.style.bottom = '10%';
+            note.innerText = '₦1000';
+            container.appendChild(note);
+
+            setTimeout(() => note.remove(), 2000);
+
+            if (typeof confetti === 'function') {
+                confetti({ particleCount: 15, spread: 40, origin: { y: 0.8 } });
+            }
+        }
+
+        // 5. RSVP FORM HANDLING
+        function handleRSVPSubmit(e) {
+            e.preventDefault();
+            const name = document.getElementById('rsvp-name').value;
+            const phone = document.getElementById('rsvp-phone').value;
+            const status = document.getElementById('rsvp-status').value;
+
+            const entry = { name, phone, status, timestamp: new Date().toISOString() };
+            localStorage.setItem(`rsvp_${name}`, JSON.stringify(entry));
+
+            document.getElementById('rsvp-form').classList.add('hidden');
+            document.getElementById('rsvp-success-banner').classList.remove('hidden');
+
+            if (typeof confetti === 'function') {
+                confetti({ particleCount: 80, spread: 60 });
+            }
+        }
+
+        function resetRSVPForm() {
+            document.getElementById('rsvp-form').reset();
+            document.getElementById('rsvp-form').classList.remove('hidden');
+            document.getElementById('rsvp-success-banner').classList.add('hidden');
+        }
+
+        // 6. GUESTBOOK SYSTEM
+        const sampleWishes = [
+            { author: "Chief & Lolo Ebuka", location: "Awka", message: "Wishing Chukwudi & Amarachi a lifetime filled with peace, love, and endless blessings! Congratulations!" },
+            { author: "Amina & Tunde", location: "Lagos", message: "So thrilled to celebrate your special love story! May your home be blessed continuously." }
+        ];
+
+        function renderGuestbookEntries() {
+            const saved = JSON.parse(localStorage.getItem('guestbook_wishes') || '[]');
+            const all = [...sampleWishes, ...saved];
+            const grid = document.getElementById('guestbook-grid');
+
+            grid.innerHTML = all.map(w => `
+                <div class="bg-white p-5 rounded-2xl border border-gold-400/30 shadow-sm space-y-2 text-left">
+                    <p class="text-slate-700 italic text-sm">"${w.message}"</p>
+                    <div class="pt-2 border-t border-slate-100 flex items-center justify-between text-xs">
+                        <span class="font-bold text-emerald-900">${w.author}</span>
+                        <span class="text-slate-400">${w.location || 'Guest'}</span>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        function addGuestbookEntry() {
+            const author = document.getElementById('gb-author').value.trim();
+            const location = document.getElementById('gb-location').value.trim();
+            const message = document.getElementById('gb-message').value.trim();
+
+            if (!author || !message) {
+                alert('Please provide your name and a wish message.');
+                return;
+            }
+
+            const saved = JSON.parse(localStorage.getItem('guestbook_wishes') || '[]');
+            saved.unshift({ author, location, message });
+            localStorage.setItem('guestbook_wishes', JSON.stringify(saved));
+
+            document.getElementById('gb-author').value = '';
+            document.getElementById('gb-location').value = '';
+            document.getElementById('gb-message').value = '';
+
+            renderGuestbookEntries();
+            if (appState.soundFxEnabled) SoundFX.playChime();
+        }
+
+        // 7. UTILS & LIGHTBOX
+        function openLightbox(src, caption) {
+            document.getElementById('lightbox-img').src = src;
+            document.getElementById('lightbox-caption').innerText = caption;
+            document.getElementById('lightbox-modal').classList.remove('hidden');
+        }
+
+        function closeLightbox() {
+            document.getElementById('lightbox-modal').classList.add('hidden');
+        }
+
+        function copyColorCodes() {
+            const codes = "Emerald Green: #0B5D45, Champagne Gold: #D6B56D, Warm Ivory: #FFF8E9";
+            navigator.clipboard ? navigator.clipboard.writeText(codes) : document.execCommand('copy');
+            alert("Wedding palette colors copied to clipboard!");
+        }
+
+        function openMapDirections(query) {
+            window.open(`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(query)}`, '_blank');
+        }
+
+        function addToGoogleCalendar() {
+            const title = encodeURIComponent("Wedding of Chukwudi & Amarachi");
+            const details = encodeURIComponent("Join us in celebrating Chukwudi & Amarachi in Awka, Anambra State!");
+            const location = encodeURIComponent(WEDDING_CONFIG.tradVenue);
+            const url = `https://calendar.google.com/calendar/render?action=TEMPLATE&text=${title}&details=${details}&location=${location}&dates=20261114T100000Z/20261115T200000Z`;
+            window.open(url, '_blank');
+        }
+
+        function shareOnWhatsApp() {
+            const msg = encodeURIComponent(`You are cordially invited to the wedding of Chukwudi & Amarachi (#ChukwudiAndAmarachi2026) in Awka, Anambra State! Explore the invitation: ${window.location.href}`);
+            window.open(`https://api.whatsapp.com/send?text=${msg}`, '_blank');
+        }
+
+        function copyInvitationLink() {
+            navigator.clipboard ? navigator.clipboard.writeText(window.location.href) : document.execCommand('copy');
+            alert("Invitation web link copied to clipboard!");
+        }
+
+        // LOCAL STORAGE HELPERS
+        function saveLocalStorageData() {
+            localStorage.setItem('lovequest_state', JSON.stringify(appState));
+        }
+
+        function loadLocalStorageData() {
+            const data = localStorage.getItem('lovequest_state');
+            if (data) {
+                appState = { ...appState, ...JSON.parse(data) };
+            }
+        }
+    </script>
+
+</body>
+</html>
